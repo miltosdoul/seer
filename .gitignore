@@ -1,0 +1,26 @@
+# Synced per-cluster alert databases (regenerate with `make sync`)
+*.db
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+build/
+dist/
+
+# Tooling caches
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+
+# Environment / secrets
+.env
+
+# Local cluster config (keep clusters.example.yaml as the template)
+seer_config.yaml
+clusters.yaml
+
+# Local scratch notes
+TODO.md

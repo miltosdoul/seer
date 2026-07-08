@@ -1,0 +1,11 @@
+clusters:
+  prod-us-east-1:
+    kubeconfig_path: ~/.kube/prod-us-east-1.yaml
+  prod-eu-west-1:
+    kubeconfig_path: ~/.kube/prod-eu-west-1.yaml
+    # Optional: override where the synced database lives. If omitted,
+    # seer-sync writes to (and seer reads from) prod-eu-west-1.db in
+    # ~/.local/share/seer (or --db-dir).
+    # Copy this file to ~/.config/seer/config.yaml and both commands pick
+    # it up without --config.
+    db_file: /var/lib/seer/prod-eu-west-1.db
