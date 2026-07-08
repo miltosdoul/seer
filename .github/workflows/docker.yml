@@ -51,7 +51,7 @@ jobs:
 
       # Scan exactly what was pushed (by digest). Fails the workflow on
       # fixable HIGH/CRITICAL vulnerabilities.
-      - uses: aquasecurity/trivy-action@0.36.0
+      - uses: aquasecurity/trivy-action@v0.36.0
         with:
           image-ref: ${{ env.IMAGE }}@${{ steps.build.outputs.digest }}
           format: table
