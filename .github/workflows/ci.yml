@@ -13,6 +13,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: astral-sh/setup-uv@v6
+        with:
+          version: "0.11.28"
       - name: Format check
         run: uvx ruff format --check .
       - name: Lint
@@ -23,6 +25,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: astral-sh/setup-uv@v6
+        with:
+          version: "0.11.28"
       - name: Lockfile is up to date with pyproject.toml
         run: uv lock --check
       - name: Vulnerability audit (OSV)
@@ -37,6 +41,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: astral-sh/setup-uv@v6
+        with:
+          version: "0.11.28"
       - run: |
           uv run seer --help
           uv run seer-sync --help
